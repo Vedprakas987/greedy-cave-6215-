@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+*{
+  font-style: inherit;
+
+}
+
+.productpage{
+  background-color: rgb(253, 254, 255);
+}

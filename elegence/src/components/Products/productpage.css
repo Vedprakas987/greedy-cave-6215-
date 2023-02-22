@@ -1,0 +1,19 @@
+@media only screen and (max-width: 600px) and (min-width: 360px){
+    .productpage{
+    display: grid;
+    grid-template-columns: 1;
+    } 
+}
+
+@media only screen and (max-width: 720px) and (min-width: 540px){
+    .productpage{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    } 
+}
+@media only screen and (max-width: 1440px) and (min-width: 720px){
+    .productpage{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    } 
+}
