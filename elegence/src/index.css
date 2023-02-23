@@ -13,9 +13,10 @@ code {
 }
 *{
   font-style: inherit;
-
+  font-family: "Goudy Bookletter 1911", sans-serif;
 }
 
 .productpage{
-  background-color: rgb(253, 254, 255);
+  background-color:#FFFEF1
+  ;
 }
