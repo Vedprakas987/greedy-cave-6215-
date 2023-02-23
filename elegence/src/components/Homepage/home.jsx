@@ -61,7 +61,7 @@ export const Home = () => {
             }
         </SimpleGrid>
 
-        <img width={"76%"} style={{ margin: "auto" }} src={data?.section_5.image} alt="image" />
+        <img width={"76%"} style= {{ margin: "auto" }} src={data?.section_5.image} alt="image" />
         <Button bottom={"20"} paddingX="25px" borderRadius={"0%"}>{data?.section_5.title}</Button>
 
         <h3>Top-Rated Picks</h3>
@@ -80,12 +80,7 @@ export const Home = () => {
             }
         </SimpleGrid>
 
-        {/* 
-        {
-            data && data.top_rated_picks.map((el) => {
-                return <> {<img src={el.image} alt="title" />}{el.title} {el.description}</>
-            })
-        } */}
+       
         {
             data && data.you_may_also_like.map((el) => {
                 return <> {<img src={el.image1} alt="title" />}
