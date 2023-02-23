@@ -3,6 +3,15 @@
     display: grid;
     grid-template-columns: 1;
     } 
+    .Add{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .Addimg{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 720px) and (min-width: 540px){
