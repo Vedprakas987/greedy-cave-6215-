@@ -14,9 +14,6 @@ function App() {
     <div className="App">
       <br/>
       <MainRoutes/>
-      <Cart/>
-      <Checkout/>
-      <Pay/>
     </div>
   );
 }
