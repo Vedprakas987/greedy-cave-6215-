@@ -10,8 +10,6 @@ import FirstNav from './FirstNav';
 
 
 export default function Navbar() {
-
-
   return (
     <>
       <FirstNav />
@@ -26,7 +24,7 @@ export default function Navbar() {
             </Box>
           </HStack>
           <Flex alignItems={'center'}>
-
+            
           </Flex>
         </Flex>
       </Box>
