@@ -12,11 +12,9 @@ export default function ProductList({data}) {
 
 data.map((el,i)=>{
             return(    
-          <Link to={`/producdetail/${el.id}`}>
               <Box  key={i+1}>
            <ProductCard key={i+1} {...el}/>
                 </Box>
-              </Link>
             
             )
         })

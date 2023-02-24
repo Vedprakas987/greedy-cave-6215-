@@ -25,4 +25,18 @@
     display: grid;
     grid-template-columns: 20% 80%;
     } 
+    .ProductDetail{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 300px;
+    gap: 1%;
+
+
+    }
+    .parent{
+        display: grid;
+        grid-template-columns: 55% 32%;
+        justify-content: center;
+        gap: 2%;
+    }
 }
