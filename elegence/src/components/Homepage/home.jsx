@@ -6,16 +6,16 @@ export const Home = () => {
 
     const [data, setData] = useState();
 
-    const  getData = () => {
-        return axios.get("https://beautyskin-api.onrender.com/Anthropology_home")
-            .then((res) => {
-                console.log(res.data)
-                setData(res.data)
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-    }
+    // const  getData = () => {
+    //     return axios.get("https://beautyskin-api.onrender.com/Anthropology_home")
+    //         .then((res) => {
+    //             console.log(res.data)
+    //             setData(res.data)
+    //         })
+    //         .catch((err) => {
+    //             console.log(err)
+    //         })
+    // }
 
     //  console.log(data)
     useEffect(() => {
@@ -88,13 +88,16 @@ export const Home = () => {
                     {el.title}</>
             })
         }
-        {
+
+        {/* {
             data && data.recently_viewed.map((el) => {
                 return <> {<img src={el.image1} alt="title" />}
                     {<img src={el.image2} alt="title" />}
                     {el.title}</>
             })
-        }
+        } */}
+
+
         {
             data && data.more_to_explore.map((el) => {
                 return <> {<img src={el.image} alt="title" />}{el.title} {el.description}</>
