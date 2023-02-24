@@ -6,7 +6,7 @@ export const Home = () => {
 
     const [data, setData] = useState();
 
-    const getData = () => {
+    const  getData = () => {
         return axios.get("https://beautyskin-api.onrender.com/Anthropology_home")
             .then((res) => {
                 console.log(res.data)
