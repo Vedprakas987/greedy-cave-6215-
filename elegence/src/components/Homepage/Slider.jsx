@@ -17,12 +17,12 @@ export function SliderTopCompanies(props) {
   };
   // console.log(data, "sliderTOpCompanies")
   return (
-    <div style={{ width: "77%", margin: "auto" }} >
+    <div  style={{ width: "77%", margin: "auto" }} >
       <Slider {...settings}>
         {data && data.map((item) => {
           return <Container centerContent overflow={"hidden"} maxW={"fit-content"} key={item.title}>
             <Box alignContent={"center"} justifyContent={"center"} >
-              <Img width={"100%"} src={item.image1} alt={item.alt} />
+               <Img width={"100%"} src={item.image1} alt={item.alt} />
               <Text
                 align={"start"}
                 fontFamily="Avenir Medium, sans-serif"
