@@ -1,0 +1,20 @@
+.slick-prev::before,
+.slick-next::before {
+    
+    opacity: 0.1;
+   
+    background-color:black;
+    /* padding: 10px; */
+    /* z-index: 10; */
+
+}
+
+.slick-prev::before {
+    margin-left: -45px;
+}
+
+.slick-prev::after,
+.slick-next::after {
+    z-index: 10;
+
+}
