@@ -10,7 +10,7 @@ import Account from './Account';
 
 export default function FirstNav() {
     return (
-        <Box>
+        <Box >
             <Flex
                 bg={useColorModeValue('gray.100')}
                 py={{ base: 2 }}

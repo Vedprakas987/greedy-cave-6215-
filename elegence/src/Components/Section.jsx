@@ -1,13 +1,3 @@
-# Anthropologie-clone
-
-installation 
-1) npm install @mui/material @mui/styled-engine-sc styled-components
-2) npm install @mui/material @emotion/react @emotion/styled
-3) npm i @fortawesome/react-fontawesome
-4) npm i @fortawesome/free-regular-svg-icons
-5) npm i @fortawesome/free-solid-svg-icons
-6) 
-
 import {
     Box,
     Flex,
@@ -33,7 +23,7 @@ import {
     ChevronRightIcon,
 } from '@chakra-ui/icons';
 
-export default function Sections() {
+export default function Section() {
     const { isOpen, onToggle } = useDisclosure();
 
     return (

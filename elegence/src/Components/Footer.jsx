@@ -17,7 +17,6 @@ import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { BiMailSend } from 'react-icons/bi';
 import { useToast } from '@chakra-ui/react'
 
-// import Image from 'next/image';
 const SocialButton = ({
     children,
     label,
