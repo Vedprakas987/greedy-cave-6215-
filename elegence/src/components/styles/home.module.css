@@ -1,0 +1,66 @@
+.card {
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    border: 2px solid black;
+}
+
+.imgDIV {
+    width: 100%;
+    position: relative;
+}
+
+.imgDIV>img {
+    width: 100%;
+}
+
+.card>div>img {
+    width: 90%;
+}
+
+.card>h4 {
+    margin: 0px;
+}
+
+.card>p {
+    margin: 0px;
+}
+
+.hiddenDiv {
+    opacity: 0.5;
+    width: 100%;
+    margin: auto;
+    color: black;
+    background-color: white;
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    padding: 20px 10px;
+    position: absolute;
+    visibility: hidden;
+    bottom: 40px;
+    left: 0px;
+    right: 0px;
+    height: 0px;
+    transition: .2s ease;
+}
+
+.pCard:hover .hiddenDiv {
+    height: 50px;
+    visibility: visible;
+    transition: .2s ease;
+
+}
+
+.hiddenDiv p {
+    line-height: 10px;
+    color: white;
+}
+
+.hiddenDiv img {
+    width: 20%;
+    padding: 0px;
+}

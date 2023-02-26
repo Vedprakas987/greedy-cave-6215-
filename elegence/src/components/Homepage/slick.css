@@ -1,11 +1,11 @@
 .slick-prev::before,
 .slick-next::before {
-    
+
     opacity: 0.1;
-   
-    background-color:black;
+
+    background-color: black;
     /* padding: 10px; */
-    /* z-index: 10; */
+    z-index: 10;
 
 }
 

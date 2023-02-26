@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios"
 import { Box, Button, Divider, HStack, Image, SimpleGrid, Tag, Text } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import style from "../styles/home.module.css"
+
+
 import { SliderTopCompanies } from './Slider';
 
 export const Home = () => {
@@ -117,21 +117,26 @@ export const Home = () => {
 
     return <div>
         {/* <Box width={"76%"}> */}
-        <SimpleGrid columns={[4]} width={"76%"} border="2px solid red" boxSizing="border-box" margin="auto" marginBottom={"40px"}>
+        <SimpleGrid
+            columns={[4]}
+            width={"71%"}
+            // border="2px solid red"
+            boxSizing="border-box"
+            margin="auto"
+            marginBottom={"40px"}>
             <Image src="https://images.ctfassets.net/5de70he6op10/2nrwWxJ7TQjvhycNGHksLK/51645a9e392800577d6200a92a1edc88/473929279-ls_m0_banner_g.jpg?w=630&q=80&fm=webp" alt="img" />
             <Image src="https://images.ctfassets.net/5de70he6op10/7tbbE9vPj5JLvxgKHE5RbB/e0bc77c5fbc266e63294817e82ead70e/473929272-ls_m0_banner_d.jpg?w=630&q=80&fm=webp" alt='img' />
             <Image src="https://images.ctfassets.net/5de70he6op10/5AHOqJRlFibi2rOS0C77aP/3e8dc2dfc62dd089f2cb2e53357a78d3/473929274-ls_m0_banner_e.jpg?w=630&q=80&fm=webp" alt='img' />
             <Image src="https://images.ctfassets.net/5de70he6op10/1yCt23d6XxdmkjGohde5ev/97f13874f53c019005210e6a690f3836/473929257-ls_m0_banner_a.jpg?w=630&q=80&fm=webp" alt='img' />
         </SimpleGrid>
         {/* </Box> */}
-        <img width={"76%"} style={{ margin: "auto" }} src={data?.banner} alt="banner" />
+        <img width={"71%"} style={{ margin: "auto" }} src={data?.banner} alt="banner" />
         <Button
             bg="white"
             bottom={"20"}
-            paddingX="25px"
             borderRadius={"0%"}
             fontWeight="120"
-            fontSize="14px"
+            fontSize="10px"
             fontFamily="Arial, sans-serif"
             color={"#1A202C"}
             textDecoration="none solid rgb(26, 32, 44)"
@@ -140,21 +145,25 @@ export const Home = () => {
         </Button>
 
 
-        <SimpleGrid border={"2px solid blue"} columns={[1, 2, 3]} width={"76%"} margin="auto" spacing={"20px"} >
+
+
+        <SimpleGrid
+            //  border={"2px solid blue"}
+            columns={[1, 2, 3]} width={"71%"} margin="auto" spacing={"20px"} >
             {
                 data && data.section_2.map((el) => {
-                    return <Box position={'relative'} border={"1px solid yellow"}>
+                    return <Box position={'relative'}>
                         < Image width={"100%"} src={el.image} alt="title" />
                         <Button
                             bg="white"
                             bottom={"20"}
-                            paddingX="25px"
                             borderRadius={"0%"}
                             fontWeight="120"
-                            fontSize="14px"
+                            fontSize="10px"
                             fontFamily="Arial, sans-serif"
                             color={"#1A202C"}
                             textDecoration="none solid rgb(26, 32, 44)"
+
                         >{el.title}</Button>
                     </Box >
                 })
@@ -162,39 +171,44 @@ export const Home = () => {
         </SimpleGrid>
 
 
-        <SimpleGrid border={"2px solid blue"} columns={[1, 2, 2]} width={"76%"} margin="auto" spacing={"20px"} >
+        <SimpleGrid
+            //  border={"2px solid blue"} 
+            columns={[1, 2, 2]} width={"71%"} margin="auto" spacing={"20px"} >
             {
                 data && data.section_3.map((el) => {
-                    return <Box position={'relative'} border={"1px solid yellow"}>
+                    return <Box position={'relative'} >
                         < Image width={"100%"} src={el.image} alt="title" />
                         <Button
                             bg="white"
                             bottom={"20"}
-                            paddingX="25px"
                             borderRadius={"0%"}
                             fontWeight="120"
-                            fontSize="14px"
+                            fontSize="10px"
                             fontFamily="Arial, sans-serif"
                             color={"#1A202C"}
                             textDecoration="none solid rgb(26, 32, 44)"
+
                         >{el.title}</Button>
                     </Box >
                 })
             }
         </SimpleGrid>
 
-        <SimpleGrid border={"2px solid blue"} columns={[1, 2, 3]} width={"76%"} margin="auto" spacing={"20px"} >
+        <SimpleGrid
+            // border={"2px solid blue"} 
+            columns={[1, 2, 3]} width={"71%"} margin="auto" spacing={"20px"} >
             {
                 data && data.section_4.map((el) => {
-                    return <Box position={'relative'} border={"1px solid yellow"}>
+                    return <Box position={'relative'}
+                    //  border={"1px solid yellow"}
+                    >
                         < Image width={"100%"} src={el.image} alt="title" />
                         <Button
                             bg="white"
                             bottom={"20"}
-                            paddingX="25px"
                             borderRadius={"0%"}
                             fontWeight="120"
-                            fontSize="14px"
+                            fontSize="10px"
                             fontFamily="Arial, sans-serif"
                             color={"#1A202C"}
                             textDecoration="none solid rgb(26, 32, 44)"
@@ -204,61 +218,65 @@ export const Home = () => {
             }
         </SimpleGrid>
 
-        <img width={"76%"} style={{ margin: "auto" }} src={data?.section_5.image} alt="image" />
+        <img width={"71%"} style={{ margin: "auto" }} src={data?.section_5.image} alt="image" />
         <Button
             bg="white"
             bottom={"20"}
-            paddingX="25px"
             borderRadius={"0%"}
             fontWeight="120"
-            fontSize="14px"
+            fontSize="10px"
             fontFamily="Arial, sans-serif"
             color={"#1A202C"}
+
             textDecoration="none solid rgb(26, 32, 44)">{data?.section_5.title}</Button>
 
         <Text
             color={"#26262C"}
-            width={"76%"}
+            width={"71%"}
             align="start"
-            marginLeft={"240px"}
+            marginLeft={"220px"}
             fontFamily={"Avenir Medium, sans-serif"}
             fontWeight="400"
             lineHeight={"23.4px"}
-            fontSize={"18px"}>
+            fontSize={"14px"}>
             Top-Rated Picks
         </Text>
-        <Divider width={"76%"} margin="auto" color={"gray"} />
+        <Divider width={"71%"} margin="auto" color={"gray"} />
         <br />
-        <SimpleGrid border={"2px solid blue"} columns={[1, 2, 4]} width={"76%"} margin="auto" spacing={"20px"} >
+        <SimpleGrid
+            //  border={"2px solid blue"}
+            columns={[1, 2, 4]} width={"71%"} margin="auto" spacing={"20px"} >
 
             {
 
                 data && data.top_rated_picks.map((el) => {
-                    return <Box position={'relative'} border={"1px solid yellow"}>
+                    return <Box position={'relative'}
+                    // border={"1px solid yellow"}
+                    >
                         < Image width={"100%"} src={el.image} alt="title" />
                         <Text
-
+                            fontSize={"10px"}
                             align={"start"}
                             fontFamily={"Courier, monospace"}
                             color="#26262C"
                             lineHeight={"23.4px"}
                             fontWeight="400"
-                            paddingY="10px"
+                            paddingY="8px"
                         >
                             CUSTOMER FAVORITE</Text>
                         <Text
                             align={"start"}
-                            fontSize={"22px"}
+                            fontSize={"16px"}
                             lineHeight="33px"
-                            fontWeight={"400"}
+                            fontWeight={"300"}
                             color="#26262C"
-                            paddingY="10px"
+                            // paddingY="6px"
                             fontFamily={"Spectral Extra Light,serif"}
                         >{el.title}</Text>
                         <Text
                             align={"start"}
                             color="#26262C"
-                            fontSize={"14px"}
+                            fontSize={"12px"}
                             lineHeight="14px"
                             fontWeight={"500"}
                             paddingY="10px"
@@ -267,13 +285,19 @@ export const Home = () => {
                         <Text
                             align={"start"}
                             color={'#26262C'}
-                            fontSize="14px"
+                            fontSize="12px"
                             lineHeight={"21px"}
                             fontWeight="400"
                             letterSpacing={"0.6px"}
                             paddingY="10px"
                             fontFamily={"Avenir Book, sans-serif"}>{el.description}</Text>
-                        <a>shop now</a>
+                        <Text
+                            fontSize={"9px"}
+                            color={"blue"}
+                            align="start"
+                        >
+                            shop now
+                        </Text>
                     </Box >
                 })
             }
@@ -285,35 +309,34 @@ export const Home = () => {
         {/* <Slider/> */}
         <Text
             color={"#26262C"}
-            width={"76%"}
+            width={"71%"}
             align="start"
-            marginLeft={"240px"}
+            marginLeft={"220px"}
             fontFamily={"Avenir Medium, sans-serif"}
-            fontWeight="500"
+            fontWeight="400"
             lineHeight={"23.4px"}
-            fontSize={"18px"}
-            marginTop="14px"
+            fontSize={"14px"}
+            paddingY="14px"
         >Trending Now
         </Text>
-        <Divider width={"76%"} margin="auto" color={"gray"} />
+        <Divider width={"71%"} margin="auto" color={"gray"} />
         <br />
         <SliderTopCompanies data={imageSlider} />
 
         <Text
             color={"#26262C"}
-            width={"76%"}
+            width={"71%"}
             align="start"
-            marginLeft={"240px"}
+            marginLeft={"220px"}
             fontFamily={"Avenir Medium, sans-serif"}
-            fontWeight="500"
+            fontWeight="400"
             lineHeight={"23.4px"}
-            fontSize={"18px"}
-            marginTop="14px"
+            fontSize={"14px"}
         >
             You May Also Like
         </Text>
 
-        <Divider width={"76%"} margin="auto" color={"gray"} />
+        <Divider width={"71%"} margin="auto" color={"gray"} />
         <br />
         <SliderTopCompanies data={like} />
 
@@ -331,17 +354,19 @@ export const Home = () => {
             More to Explore
         </Text>
 
-        <Divider width={"76%"} border="0.5px solid" margin="auto" color={"#383739"} marginBottom="22px" />
-        <SimpleGrid border={"2px solid blue"} columns={[1, 2, 3]} width={"76%"} margin="auto" spacing={"20px"} >
+        <Divider width={"71%"} border="0.5px solid" margin="auto" color={"#383739"} marginBottom="22px" />
+        <SimpleGrid
+            // border={"2px solid blue"}
+            columns={[1, 2, 3]} width={"71%"} margin="auto" spacing={"20px"} >
             {
                 data && data.more_to_explore.map((el) => {
-                    return <Box position={'relative'} border={"1px solid yellow"}>
+                    return <Box position={'relative'} >
                         < Image width={"100%"} src={el.image} alt="title" />
                         <Text
                             fontFamily={"Spectral Extra Light, serif"}
                             color="#26262C"
-                            fontSize={"22px"}
-                            fontWeight="400"
+                            fontSize={"16px"}
+                            fontWeight="200"
                             align={"start"}
                             paddingY="2"
                         >{el.title}</Text>
@@ -349,7 +374,8 @@ export const Home = () => {
                             paddingY="2"
                             color={"#26262C"}
                             fontFamily={"Avenir Book, sans-serif"}
-                            fontWeight="400"
+                            fontWeight="200"
+                            fontSize={"10px"}
                             align={"start"}
                         >{el.description}</Text>
                     </Box >
@@ -357,28 +383,32 @@ export const Home = () => {
             }
         </SimpleGrid>
 
-        <Divider width={"76%"} border="1px solid" margin="auto" color={"#383739"} marginTop="42px" marginBottom={"22px"} />
+        <Divider
+            width={"71%"}
+            //  border="1px solid"
+            margin="auto" color={"#383739"} marginTop="42px" marginBottom={"22px"} />
         <Text
             color={"#26262C"}
-            width={"76%"}
+            width={"71%"}
             align="start"
-            marginLeft={"240px"}
+            marginLeft={"220px"}
             fontFamily={"Avenir Medium, sans-serif"}
             fontWeight="400"
             lineHeight={"23.4px"}
-            fontSize={"18px"}
+            fontSize={"16px"}
             marginBottom="10px"
-            >
+        >
 
             About Us
         </Text>
 
         <Text
             fontFamily={"Avenir Medium, sans-serif"}
-            width={"76%"}
+            width={"71%"}
             margin="auto"
             color={"#26262C"}
-            fontWeight="400"
+            fontWeight="200"
+            fontSize={"10px"}
             align={"start"}
             letterSpacing="0.6px"
         >Our mission at Anthropologie has always been to surprise and delight you with unexpected, distinctive finds for your closet and home. We source and craft all of our products with care, ensuring that any treasure you find at Anthropologie is unique, just like you. Explore our dresses shop to find styles and fits perfect for any occasion, from cocktail party dresses to wedding guest dresses to casual daytime silhouettes. Shop BHLDN and take a look at our selection of wedding dresses and bridesmaids dresses. Browse party skirts, wide-leg pants and jeans, and blouses that will turn heads. Complete your look with uncommon accessories—think only-here slides and head-turning totes. Discover our expansive home collections, from furniture to curtains, decorative pillows to duvets, wall art to Moroccan-inspired rugs. Looking for a housewarming gift? Try a coffee table book, original glassware or a set of coasters.</Text>
