@@ -145,7 +145,7 @@ export const updateData = (payload) => async (dispatch) => {
 };
 
 export const postToCart=(payload)=>async(dispatch)=>{
-   axios.post(`http://localhost:8080/Cart`,payload).then((res)=>(dispatch({type:types.POST_TO_CART,payload}))
+   axios.post(`https://elegence-mock-server.onrender.com/api/Cart`,payload).then((res)=>(dispatch({type:types.POST_TO_CART,payload}))
   )
 }
 
