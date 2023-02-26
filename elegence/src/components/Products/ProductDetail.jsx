@@ -18,10 +18,10 @@ export default function ProductDetail() {
     const [DressesData1,setDress1] = useState([])
 const [DressesData2,setDress2] = useState([])
 useEffect(() => {
-axios.get("http://localhost:8080/Dresses?Section=1").then((res)=>setDress1(res.data))
+axios.get("https://elegence-mock-server.onrender.com/api/Dresses?Section=1").then((res)=>setDress1(res.data))
 }, [])
 useEffect(() => {
-    axios.get("http://localhost:8080/Dresses?Section=2").then((res)=>setDress2(res.data))
+    axios.get("https://elegence-mock-server.onrender.com/api/Dresses?Section=2").then((res)=>setDress2(res.data))
     }, [])
 
     React.useEffect(() => {

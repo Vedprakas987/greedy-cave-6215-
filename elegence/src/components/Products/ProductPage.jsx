@@ -17,10 +17,10 @@ let addElem =  {
 const [DressesData1,setDress1] = useState([])
 const [DressesData2,setDress2] = useState([])
 useEffect(() => {
-axios.get("http://localhost:8080/Dresses?Section=1").then((res)=>setDress1(res.data))
+axios.get("https://elegence-mock-server.onrender.com/api/Dresses?Section=1").then((res)=>setDress1(res.data))
 }, [])
 useEffect(() => {
-    axios.get("http://localhost:8080/Dresses?Section=2").then((res)=>setDress2(res.data))
+    axios.get("https://elegence-mock-server.onrender.com/api/Dresses?Section=2").then((res)=>setDress2(res.data))
     }, [])
 let arr1 = ['Cocktail & Party Dresses','Lounge & Casual Dresses','Little Black Dresses','Little White Dresses','Maxi Dresses','Midi Dresses','Mini & Tunic Dresses','Jumpsuits','Wedding Guest Dresses','Black Tie Wedding','Cocktail Wedding','Beach Wedding']
   
