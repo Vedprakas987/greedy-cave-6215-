@@ -1,4 +1,4 @@
-import { Box, Flex, Grid } from '@chakra-ui/layout';
+import { Box, Grid } from '@chakra-ui/layout';
 import React from 'react'
 import AddFooter from '../VComponents/AddFooter';
 import AddNav from '../VComponents/AddNav';
@@ -13,10 +13,8 @@ const Checkout = () => {
         <Ship />
         <SOrder />
       </Grid>
-
       <AddFooter />
     </Box>
-
   )
 }
 

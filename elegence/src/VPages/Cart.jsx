@@ -1,8 +1,7 @@
-import { Box, Flex, Grid, SimpleGrid } from '@chakra-ui/layout'
+import { Box, Flex, Grid } from '@chakra-ui/layout'
 import React from 'react'
 import AddFooter from '../VComponents/AddFooter'
 import AddNav from '../VComponents/AddNav'
-import Ship from '../VComponents/Ship'
 import Basket from '../VComponents/Basket'
 import Order from '../VComponents/Order'
 

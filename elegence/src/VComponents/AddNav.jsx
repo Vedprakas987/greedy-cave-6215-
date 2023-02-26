@@ -4,31 +4,13 @@ import {
   Box,
   Flex,
   HStack,
-  Button,
   Menu,
   MenuButton,
-  useColorModeValue,
   Image,
   Divider,
-  Text,
 } from '@chakra-ui/react';
 import style from "./nav.module.css"
 
-const Links = ['Dashboard', 'Projects', 'Team'];
-
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
-    }}
-    href={'#'}>
-    {children}
-  </Link>
-);
 
 export default function AddNav() {
 
