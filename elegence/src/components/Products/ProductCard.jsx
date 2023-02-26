@@ -2,8 +2,7 @@ import { border, Box, Button, Container, Flex, HStack, Image, Text } from '@chak
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export default function ProductCard({name,image,price,category,color_image,id}) {
-
+export default function ProductCard({name,image,price,category,color_image,id,nots}) {
     const [state,setState] = useState(0)
     const [boolean,setboolean] = useState(true)
     const [colorEl,setcolorEl] = useState("not")
@@ -50,25 +49,25 @@ onMouseOut={()=>setState(0)}
         </Link>
 
     <Text fontSize={"sm"} width={"98%"}  margin={"auto"} mt={"4px"} noOfLines={"1"} textAlign={'start'} as={'h2'}>{name}</Text>
-    <Text fontSize={"sm"} width={"98%"}  margin={"auto"} mt={"4px"} textAlign={'start'} as={'h2'}> ${price}</Text>
-    <Box fontSize={"sm"} width={"98%"}  margin={"auto"} mt={"4px"} justifyContent={"space-between"} display={"grid"} gridTemplateColumns={"repeat(2,1fr)"}>
+ {  nots===undefined && <Text fontSize={"sm"} width={"98%"}  margin={"auto"} mt={"4px"} textAlign={'start'} as={'h2'}> ${price}</Text>
+  } <Box fontSize={"sm"} width={"98%"}  margin={"auto"} mt={"4px"} justifyContent={"space-between"} display={"grid"} gridTemplateColumns={"repeat(2,1fr)"}>
    
-    <Box fontSize={"sm"} width={"98%"}  margin={"auto"} mt={"4px"} display={"inline-flex"} gap={"8px"}>
+    <Box  fontSize={"sm"} width={"98%"}  margin={"auto"} mt={"4px"} display={"inline-flex"} gap={"8px"}>
     
     {
-    color_image.map((el,i)=>{
+   nots===undefined && color_image.map((el,i)=>{
         return(
                      <Image h={"40px"} borderRadius={"50%"} onClick={()=>HandleColorImage(el)} borderInlineEndColor={"white"}   _hover={{border:"1px solid black"}} aria-selected={"true"} w={"20%"} border={"2px solid white"}  src={el}></Image>  
          )
     })    
     }
     </Box>
-    <Box textAlign={"End"}>
+ {   nots===undefined && <Box textAlign={"End"}>
     <Text mt={"0.6rem"} mr={"1rem"}>
         {color_image.length} color
     </Text>
     </Box>
-  
+}
     </Box>
    
    
