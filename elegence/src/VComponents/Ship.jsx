@@ -3,16 +3,31 @@ import { FormControl, FormLabel } from '@chakra-ui/form-control'
 import { Input, InputGroup, InputLeftAddon } from '@chakra-ui/input'
 import { Box, Flex, Text } from '@chakra-ui/layout'
 import { Select } from '@chakra-ui/select'
-import React from 'react'
+import React, { useState } from 'react'
 
 import {
     Breadcrumb,
     BreadcrumbItem,
     BreadcrumbLink,
-    BreadcrumbSeparator,
   } from '@chakra-ui/react'
 
 const Ship = () => {
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+    const [fname,setFname] = useState("")
+    const [lname,setLname] = useState("")
+    const [address,setAddress] = useState("")
+    const [city,setCity] = useState("")
+    const [mobile,setMobile] = useState("")
+    const [pin,setPin] = useState("")
+
+    const first_name = storedUser.fname
+    const last_name = storedUser.lname
+
+    const add = {
+        first_name,last_name,address,city,mobile,pin
+    }
+    localStorage.setItem("user_address",JSON.stringify(add))
+
     return (
         <Box p={"40px"}>
 
@@ -53,13 +68,13 @@ const Ship = () => {
                 <Box w={"48%"}>
                     <FormControl isRequired>
                         <FormLabel>First Name</FormLabel>
-                        <Input borderRadius={"none"} />
+                        <Input value={storedUser.fname} onChange={(e)=>setFname(e.target.value)} borderRadius={"none"} />
                     </FormControl>
                 </Box>
                 <Box w={"48%"}>
                     <FormControl isRequired>
                         <FormLabel>Last Name</FormLabel>
-                        <Input borderRadius={"none"} />
+                        <Input value={storedUser.lname} onChange={(e)=>setLname(e.target.value)} borderRadius={"none"} />
                     </FormControl>
                 </Box>
             </Flex>
@@ -67,7 +82,7 @@ const Ship = () => {
             <Box mb={"16px"}>
                 <FormControl isRequired>
                     <FormLabel>Street Address</FormLabel>
-                    <Input placeholder='35 character limit, continue below.' borderRadius={"none"} />
+                    <Input value={address} onChange={(e)=>setAddress(e.target.value)} placeholder='35 character limit, continue below.' borderRadius={"none"} />
                 </FormControl>
             </Box>
 
@@ -84,7 +99,7 @@ const Ship = () => {
                 <Box w={"48%"}>
                     <FormControl isRequired>
                         <FormLabel>City</FormLabel>
-                        <Input borderRadius={"none"} />
+                        <Input value={city} onChange={(e)=>setCity(e.target.value)} borderRadius={"none"} />
                     </FormControl>
                 </Box>
                 <Box w={"48%"}>
@@ -97,7 +112,7 @@ const Ship = () => {
                 <Box w={"48%"}>
                 <FormControl isRequired>
                     <FormLabel>Postcode</FormLabel>
-                    <Input borderRadius={"none"}/>
+                    <Input value={pin} onChange={(e)=>setPin(e.target.value)} borderRadius={"none"}/>
                     </FormControl>  
                 </Box>
                 <Box w={"48%"}>
@@ -105,7 +120,7 @@ const Ship = () => {
                         <FormLabel>Mobile Number</FormLabel>
                         <InputGroup>
                             <InputLeftAddon borderRadius={"none"} children='+91' />
-                            <Input borderRadius={"none"} type='tel' />
+                            <Input value={mobile} onChange={(e)=>setMobile(e.target.value)} borderRadius={"none"} type='tel' />
                         </InputGroup>
                     </FormControl>
                 </Box>

@@ -1,5 +1,5 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Image, Input } from '@chakra-ui/react'
-import { Box, Divider, Flex, Text } from '@chakra-ui/layout'
+import { Box, Flex, Text } from '@chakra-ui/layout'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { RiErrorWarningLine } from 'react-icons/ri';

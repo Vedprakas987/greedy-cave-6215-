@@ -1,8 +1,7 @@
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Image, Input, useToast } from '@chakra-ui/react'
-import { Box, Divider, Flex, Text } from '@chakra-ui/layout'
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Input, useToast } from '@chakra-ui/react'
+import { Box, Flex, Text } from '@chakra-ui/layout'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { RiErrorWarningLine } from 'react-icons/ri';
 import { Button } from '@chakra-ui/button';
 
 const POrder = () => {
