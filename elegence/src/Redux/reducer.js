@@ -1,9 +1,11 @@
+import Cart from "../VPages/Cart";
 import * as types from "./actionTypes";
 
 const initialState = {
   products: [],
   isLoading: false,
   isError: false,
+  Cart:[]
 };
 
 const reducer = (oldState = initialState, actionObj) => {
@@ -37,6 +39,8 @@ const reducer = (oldState = initialState, actionObj) => {
       return { ...oldState, isLoading: false, isError: false };
     case types.UPDATE_DATA_ERROR:
       return { ...oldState, isLoading: false, isError: true };
+      case types.POST_TO_CART:
+      return {...oldState,Cart:[...Cart,payload]}
     default:
       return oldState; 
   }

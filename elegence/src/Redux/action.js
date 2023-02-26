@@ -59,6 +59,13 @@ const statusDataError = () => {
     type: types.STATUS_DATA_ERROR,
   };
 };
+
+const postinCart =(payload)=>{
+  return {
+    type:types.POST_TO_CART,
+    payload
+  }
+}
 // ${API_URL}
 const getData = (dispatch) => {
   console.log("getdata calling");
@@ -117,6 +124,7 @@ const deleteData = (id) => async (dispatch) => {
 };
 
 
+
 export const updateData = (payload) => async (dispatch) => {
   const { id } = payload;
  
@@ -136,8 +144,8 @@ export const updateData = (payload) => async (dispatch) => {
   }
 };
 
-export const postToCart=(payload)=>async(dispatch)={
-  axios.post(`http://localhost:3000/Cart`,payload).then(res
+export const postToCart=(payload)=>async(dispatch)=>{
+   axios.post(`http://localhost:8080/Cart`,payload).then((res)=>(dispatch({type:types.POST_TO_CART,payload}))
   )
 }
 

@@ -3,13 +3,15 @@ import axios from 'axios'
 import { color } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { postToCart } from '../../Redux/action'
+import { useDispatch } from 'react-redux'
 import GameShower from './GameShower'
 import ProductCard from './ProductCard'
 import ProductPage from './ProductPage'
 import "./productpage.css"
-import Spiwer from './Swiper'
+import Spiwer from './Swiper';
 export default function ProductDetail() {
-
+    const dispatch = useDispatch()
     const [data,setdata] = useState({})
     const {boolean,id,colorEl,state} = useParams()
     console.log(boolean,id,colorEl,state)
@@ -110,7 +112,7 @@ useEffect(() => {
   <option value="">5</option>
   </select>
    </Flex>
-   <Button padding={{base:"2px",sm:"7px"}} color={"white"} backgroundColor={"#536872"} ml={{base:"1rem",lg:"1rem",sm:"2rem"}} borderRadius={"0px"}  w={{base:"80%",sm:"90%",md:"80%",lg:"70%",xl:"70%"}}  fontSize={"sm"} fontWeight={"md"} mt={"1rem"}>
+   <Button onClick={()=>dispatch(postToCart(data))}  padding={{base:"2px",sm:"7px"}} color={"white"} backgroundColor={"#536872"} ml={{base:"1rem",lg:"1rem",sm:"2rem"}} borderRadius={"0px"}  w={{base:"80%",sm:"90%",md:"80%",lg:"70%",xl:"70%"}}  fontSize={"sm"} fontWeight={"md"} mt={"1rem"}>
 
   ADD TO BASKET
 </Button>

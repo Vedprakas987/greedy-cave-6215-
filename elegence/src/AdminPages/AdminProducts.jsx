@@ -1,10 +1,7 @@
 import { Box, Text } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getData } from "../AdminRedux/action";
-import Loader from "../Components/AdminComponents/Loader";
-import Row from "../Components/AdminComponents/Row";
+import { getData } from "../Redux/action";
 
 
 
@@ -24,7 +21,7 @@ const Products = () => {
     dispatch(getData);
   };
     console.log(products)
-  if (isLoading) return <Loader />;
+  // if (isLoading) return <Loader />;
   
 
   return (
@@ -35,13 +32,6 @@ const Products = () => {
         </Text>
       </Box>
       
-      
-      {products.length > 0 &&
-        products?.reverse().map((item, id) => {
-          return (
-            <Row key={id} data={item} rowID={id} renderData={renderData} />
-          );
-        })}
     </Box>
   );
 };
