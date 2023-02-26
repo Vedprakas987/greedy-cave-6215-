@@ -31,7 +31,7 @@ export function SliderTopCompanies(props) {
                 fontSize={"12px"}
               >{item.title}</Text>
               <Text
-                className={style.hiddenDiv}
+                    className={style.hiddenDiv}
                 textAlign={'center'}
                   fontFamily="Avenir Medium, sans-serif"
                 paddingY="8px"

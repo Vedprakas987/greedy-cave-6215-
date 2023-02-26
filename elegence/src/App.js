@@ -9,9 +9,15 @@ import { Home } from './components/Homepage/home';
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
       <br />
       <Home />
       <MainRoutes />
+=======
+
+      <MainRoutes />
+
+>>>>>>> 2100eea1cd3b4280224c92777f46f4903b50e269
     </div>
   );
 }

@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios"
+<<<<<<< HEAD
 import { Box, Button, Divider, HStack, Image, SimpleGrid, Tag, Text } from '@chakra-ui/react';
 
 
 import { SliderTopCompanies } from './Slider';
+=======
+import { Box, Button, Image, SimpleGrid, Tag, Text } from '@chakra-ui/react';
+>>>>>>> 2100eea1cd3b4280224c92777f46f4903b50e269
 
 export const Home = () => {
 
     const [data, setData] = useState();
 
+<<<<<<< HEAD
     //Slider
     const imageSlider = [
         {
@@ -101,6 +106,10 @@ export const Home = () => {
 
     const getData = () => {
         return axios.get("https://beautyskin.onrender.com/Anthropology_home")
+=======
+    const getData = () => {
+        return axios.get("https://beautyskin-api.onrender.com/Anthropology_home")
+>>>>>>> 2100eea1cd3b4280224c92777f46f4903b50e269
             .then((res) => {
                 console.log(res.data)
                 setData(res.data)
@@ -110,12 +119,17 @@ export const Home = () => {
             })
     }
 
+<<<<<<< HEAD
     console.log(data)
+=======
+    //  console.log(data)
+>>>>>>> 2100eea1cd3b4280224c92777f46f4903b50e269
     useEffect(() => {
         getData();
     }, [])
 
     return <div>
+<<<<<<< HEAD
         {/* <Box width={"76%"}> */}
         <SimpleGrid
             columns={[4]}
@@ -165,12 +179,25 @@ export const Home = () => {
                             textDecoration="none solid rgb(26, 32, 44)"
 
                         >{el.title}</Button>
+=======
+        <img width={"76%"} style={{ margin: "auto" }} src={data?.banner} alt="banner" />
+        <Button bottom={"20"} paddingX="25px" borderRadius={"0%"} fontWeight="250" fontSize="14px">shop dresses</Button>
+
+
+        <SimpleGrid border={"2px solid blue"} columns={[1, 2, 3]} width={"76%"} margin="auto" spacing={"20px"} >
+            {
+                data && data.section_2.map((el) => {
+                    return <Box position={'relative'} border={"1px solid yellow"}>
+                        < Image width={"100%"} src={el.image} alt="title" />
+                        <Button bottom={"20"} paddingX="25px" borderRadius={"0%"}>{el.title}</Button>
+>>>>>>> 2100eea1cd3b4280224c92777f46f4903b50e269
                     </Box >
                 })
             }
         </SimpleGrid>
 
 
+<<<<<<< HEAD
         <SimpleGrid
             //  border={"2px solid blue"} 
             columns={[1, 2, 2]} width={"71%"} margin="auto" spacing={"20px"} >
@@ -189,11 +216,20 @@ export const Home = () => {
                             textDecoration="none solid rgb(26, 32, 44)"
 
                         >{el.title}</Button>
+=======
+        <SimpleGrid border={"2px solid blue"} columns={[1, 2, 2]} width={"76%"} margin="auto" spacing={"20px"} >
+            {
+                data && data.section_3.map((el) => {
+                    return <Box position={'relative'} border={"1px solid yellow"}>
+                        < Image width={"100%"} src={el.image} alt="title" />
+                        <Button bottom={"20"} paddingX="25px" borderRadius={"0%"}>{el.title}</Button>
+>>>>>>> 2100eea1cd3b4280224c92777f46f4903b50e269
                     </Box >
                 })
             }
         </SimpleGrid>
 
+<<<<<<< HEAD
         <SimpleGrid
             // border={"2px solid blue"} 
             columns={[1, 2, 3]} width={"71%"} margin="auto" spacing={"20px"} >
@@ -213,11 +249,20 @@ export const Home = () => {
                             color={"#1A202C"}
                             textDecoration="none solid rgb(26, 32, 44)"
                         >{el.title}</Button>
+=======
+        <SimpleGrid border={"2px solid blue"} columns={[1, 2, 3]} width={"76%"} margin="auto" spacing={"20px"} >
+            {
+                data && data.section_4.map((el) => {
+                    return <Box position={'relative'} border={"1px solid yellow"}>
+                        < Image width={"100%"} src={el.image} alt="title" />
+                        <Button bottom={"20"} paddingX="25px" borderRadius={"0%"}>{el.title}</Button>
+>>>>>>> 2100eea1cd3b4280224c92777f46f4903b50e269
                     </Box >
                 })
             }
         </SimpleGrid>
 
+<<<<<<< HEAD
         <img width={"71%"} style={{ margin: "auto" }} src={data?.section_5.image} alt="image" />
         <Button
             bg="white"
@@ -298,11 +343,28 @@ export const Home = () => {
                         >
                             shop now
                         </Text>
+=======
+        <img width={"76%"} style= {{ margin: "auto" }} src={data?.section_5.image} alt="image" />
+        <Button bottom={"20"} paddingX="25px" borderRadius={"0%"}>{data?.section_5.title}</Button>
+
+        <h3>Top-Rated Picks</h3>
+
+        <SimpleGrid border={"2px solid blue"} columns={[1, 2, 4]} width={"76%"} margin="auto" spacing={"20px"} >
+            {
+                data && data.top_rated_picks.map((el) => {
+                    return <Box position={'relative'} border={"1px solid yellow"}>
+                        < Image width={"100%"} src={el.image} alt="title" />
+                        <Text>CUSTOMER FAVORITE</Text>
+                        <Text>{el.title}</Text>
+                        <Text>★★★★★</Text>
+                        <Text>{el.description}</Text>
+>>>>>>> 2100eea1cd3b4280224c92777f46f4903b50e269
                     </Box >
                 })
             }
         </SimpleGrid>
 
+<<<<<<< HEAD
 
 
 
@@ -412,6 +474,28 @@ export const Home = () => {
             align={"start"}
             letterSpacing="0.6px"
         >Our mission at Anthropologie has always been to surprise and delight you with unexpected, distinctive finds for your closet and home. We source and craft all of our products with care, ensuring that any treasure you find at Anthropologie is unique, just like you. Explore our dresses shop to find styles and fits perfect for any occasion, from cocktail party dresses to wedding guest dresses to casual daytime silhouettes. Shop BHLDN and take a look at our selection of wedding dresses and bridesmaids dresses. Browse party skirts, wide-leg pants and jeans, and blouses that will turn heads. Complete your look with uncommon accessories—think only-here slides and head-turning totes. Discover our expansive home collections, from furniture to curtains, decorative pillows to duvets, wall art to Moroccan-inspired rugs. Looking for a housewarming gift? Try a coffee table book, original glassware or a set of coasters.</Text>
+=======
+       
+        {
+            data && data.you_may_also_like.map((el) => {
+                return <> {<img src={el.image1} alt="title" />}
+                    {<img src={el.image2} alt="title" />}
+                    {el.title}</>
+            })
+        }
+        {
+            data && data.recently_viewed.map((el) => {
+                return <> {<img src={el.image1} alt="title" />}
+                    {<img src={el.image2} alt="title" />}
+                    {el.title}</>
+            })
+        }
+        {
+            data && data.more_to_explore.map((el) => {
+                return <> {<img src={el.image} alt="title" />}{el.title} {el.description}</>
+            })
+        }
+>>>>>>> 2100eea1cd3b4280224c92777f46f4903b50e269
 
     </div >
 }
