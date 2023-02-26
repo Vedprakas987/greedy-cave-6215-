@@ -33,9 +33,10 @@ export function SliderTopCompanies(props) {
               <Text
                 className={style.hiddenDiv}
                 textAlign={'center'}
-                fontFamily="Avenir Medium, sans-serif"
+                  fontFamily="Avenir Medium, sans-serif"
                 paddingY="8px"
-                fontSize={"14px"}
+                fontSize={"12px"}
+                fontWeight="300"
               >Quick Shop</Text>
             </Box>
           </Container>
