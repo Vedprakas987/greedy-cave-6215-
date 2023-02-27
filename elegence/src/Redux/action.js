@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as types from "./actionTypes";
 
-const API_URL = "http://localhost:3000/Furniture";
+const API_URL = "http://localhost:8080/Dresses";
 
 const getDataRequest = () => {
   return {
@@ -63,7 +63,7 @@ const statusDataError = () => {
 const getData = (dispatch) => {
   console.log("getdata calling");
   dispatch(getDataRequest()); // isLoadig  -> true
-  return axios
+   axios
     .get(`${API_URL}`)
     .then((r) => dispatch(getDataSuccess(r.data))) // getDATA(payload)
     .catch((e) => {
@@ -136,10 +136,7 @@ export const updateData = (payload) => async (dispatch) => {
   }
 };
 
-export const postToCart=(payload)=>async(dispatch)={
-  axios.post(`http://localhost:3000/Cart`,payload).then(res
-  )
-}
+
 
 
 

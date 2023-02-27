@@ -1,3 +1,5 @@
+import { Button } from '@chakra-ui/react';
+import axios from 'axios';
 import React, { useState } from 'react'
 import { AddProducttoServer } from './api'
 import { ProType } from './constant'
@@ -35,3 +37,7 @@ export default function AddProduct() {
     </div>
   )
 }
+
+
+
+

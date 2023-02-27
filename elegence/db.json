@@ -160,6 +160,70 @@
 
 ],
 
+"Users":[{
+      "id":101,
+     "name":"Nikita",
+     "email":"niki@gmail.com",
+     "password":"1234",
+    "contact":9476532754,
+  "address":"Pune"},
+    {
+      "id":102,
+      "name":"Laxmi",
+     "email":"laxmi@gmail.com",
+     "password":"5678",
+     "contact":9698563458,
+  "address":"Mumbai"
+    },
+    {
+      "id":103,
+      "name":"Vedprakash",
+      "email":"ved@gmail.com",
+      "password":"1287",
+      "contact":9836243684,
+      "address":"Patna"},
+      {
+        "id":104,
+        "name":"Vivek",
+        "email":"vivek@gmail.com",
+        "password":"8566",
+        "contact":9935286214,
+        "address":"Delhi"},
+        {
+          "id":105,
+          "name":"Shubham",
+          "email":"shubh@gmail.com",
+          "password":"4563",
+          "contact":9162985384,
+          "address":"Bangolore"}
+    ],
+
+    "orders":[
+      {
+        "id":102,
+      "Uname":"Laxmi",
+     "email":"laxmi@gmail.com",
+     "contact":9698563458,
+     "address":"Mumbai",
+     "category":"Dresses",
+     "name":"By Anthropologie Strapless Mini Dress",
+     "price":170.00,
+     "image":"https://images.urbndata.com/is/image/Anthropologie/4130326950015_072_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"
+      },
+      {
+        "id":101,
+      "Uname":"Nikita",
+     "email":"niki@gmail.com",
+     "contact":9476532754,
+     "address":"Pune",
+     "category":"Dresses",
+     "name":"By Anthropologie Square-Neck Tiered Dress",
+     "price":170.00,
+     "image":"https://images.urbndata.com/is/image/Anthropologie/4130348690217_009_b?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"
+      }
+    ],  
+
+     
  
   "posts": [
     {

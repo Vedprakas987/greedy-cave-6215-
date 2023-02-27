@@ -1,50 +1,65 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Image, Flex } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getData } from "../AdminRedux/action";
-import Loader from "../Components/AdminComponents/Loader";
-import Row from "../Components/AdminComponents/Row";
-
-
+import Sidebar from "../components/AdminComponents/Sidebar";
+import { getData } from "../Redux/action";
 
 const Products = () => {
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
 
-  const {products , isLoading } = useSelector((store) => store) 
- 
+  const products = useSelector((store) => store.products);
 
   useEffect(() => {
     dispatch(getData);
     console.log("called");
-  }, []);
-  
+  },[]);
 
-  const renderData = () => {
-    dispatch(getData);
-  };
-    console.log(products)
-  if (isLoading) return <Loader />;
-  
+  // const renderData = () => {
+  //   dispatch(getData);
+  // };
+  console.log(products);
+  // if (isLoading) return <Loader />;
 
   return (
-    <Box>
-      <Box m="auto" bg="whiteAlpha.800" border="2px solid whitesmoke">
-        <Text align="center" fontSize="40px">
+    <>
+    <Sidebar />
+    <Box w="100%" bg={"#A1A2A0"}>
+    <Box >
+      <Box m="auto" bg="#BC72A7" border="2px solid whitesmoke">
+        <Text align="center" ml={"50px"} fontSize="40px" fontFamily={"Goudy Bookletter 1911"}>
           Products
         </Text>
       </Box>
-      
-      
-      {products.length > 0 &&
-        products?.reverse().map((item, id) => {
-          return (
-            <Row key={id} data={item} rowID={id} renderData={renderData} />
-          );
-        })}
+      {products.map((item) => (
+        
+        <Box p={'8'} key={item.id} justifyContent="center">
+         
+          <Box ><Text style={{fontSize:"20px"}}>Category:-{item.category}</Text>
+          <Text >Name:-{item.name}</Text>
+          <Text  >Price:- ${item.price}</Text></Box>
+          
+
+          <Flex justifyContent={"center"} gap="20px">
+            <Text>Images</Text>
+            {item.image.map((img) => (
+              <Image width={"150px"} src={`${img}`} alt="My Image" />
+            ))}
+          </Flex>
+
+          <Flex  justifyContent={"center"} gap="20px">
+            <Text>Colors Available</Text>
+            {item.color_image.map((img) => (
+              <Image width={"150px"} src={`${img}`} alt="My Image" />
+            ))}
+          </Flex>
+        </Box>
+      ))}
     </Box>
+    
+    
+    </Box>
+    </>
   );
 };
 
 export default Products;
-

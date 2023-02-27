@@ -15,7 +15,7 @@ const reducer = (oldState = initialState, actionObj) => {
     case types.GET_DATA_REQUEST:
       return { ...oldState, isLoading: true };
     case types.GET_DATA_SUCCESS:
-      return { ...oldState, isLoading: false, data: payload };
+      return { ...oldState, isLoading: false, products: payload };
     case types.GET_DATA_ERROR:
       return { ...oldState, isLoading: false, isError: true };
 
