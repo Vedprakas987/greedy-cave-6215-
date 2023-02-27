@@ -130,12 +130,12 @@ useEffect(() => {
 
   </Box>
   
-  <Box width={"20%"} backgroundColor={"whitesmoke"} h={{lg:"120vh"}}>
+  <Box  display={{sm:"flex"}} width={{base:"100%",sm:"20%"}} backgroundColor={"whitesmoke"} h={{lg:"120vh"}}>
   <div style={{margin:"auto"}} >
     <p style={{textAlign:"center"}}>You may <br/>Also Like</p>
       {
         data.color_image && data.color_image.map((el)=>(
-            <Image _hover={{border:"1px solid black"}} className='sametypeimage'      onClick={()=>setPic(el)}   src={el} alt="prof" />
+            <Image  _hover={{border:"1px solid black"}} className='sametypeimage'      onClick={()=>setPic(el)}   src={el} alt="prof" />
         ))
       }
           </div>
@@ -143,10 +143,11 @@ useEffect(() => {
 </Box>
 
             </div>
-            <h2   style={{textAlign:"start",marginLeft:"14px",fontWeight:"medium",marginBottom:"8px"}}>Recommended For You</h2>
+            <br/>
+            <h2   style={{textAlign:"start",marginLeft:"14px",fontWeight:"medium",marginBottom:"8px",marginTop:"8px"}}>Recommended For You</h2>
             
             <hr style={{width:"98%",margin:"auto"}}/>
-           <Box mt={"2rem"}>
+           <Box  mt={"3rem"}>
            <Spiwer  products={DressesData2}  v1={3} v2={4}  v3={2} v4={1} v5={2} />
            </Box>
             </>

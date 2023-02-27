@@ -28,7 +28,7 @@ return (
     <div>
         <div className='productpage'>
           
-            <Box ml={"3rem"} textAlign={"start"} fontSize={"small"}>
+            <Box w={{sm:"100%"}} mt={"1rem"} padding={"1.3rem"} mb={"2rem"} textAlign={"start"} fontSize={"small"}>
               <h2>Browsed By</h2>
               <hr/>
              {
@@ -41,7 +41,7 @@ return (
              <br/>
              <h2>Filter By:</h2>
              <hr style={{marginTop:"5px"}}/>
-             <Select mt={"8px"}>
+             <Select w={{lg:"98%"}} mt={"8px"}>
               <option>Color</option>
               <option>Red</option>
               <option>Blue</option>
@@ -50,7 +50,7 @@ return (
               <option>Pink</option>
              </Select>
 
-             <Select mt={"8px"}>
+             <Select w={{lg:"98%"}} mt={"8px"}>
               <option>Price</option>
               <option>500-1000</option>
               <option>100-200</option>
@@ -60,7 +60,7 @@ return (
              </Select>
 
 
-             <Select mt={"8px"}>
+             <Select w={{lg:"98%"}} mt={"8px"}>
               <option>Brand</option>
               <option>AG Jeans</option>
               <option>AGolds</option>
@@ -72,7 +72,7 @@ return (
 
 
 
-             <Select mt={"8px"}>
+             <Select w={{lg:"98%"}} mt={"8px"}>
               <option>Style</option>
               <option>Red</option>
               <option>Blue</option>
@@ -84,7 +84,7 @@ return (
 
 
 
-             <Select mt={"8px"}>
+             <Select w={{lg:"98%"}} mt={"8px"}>
               <option>Color</option>
               <option>Red</option>
               <option>Blue</option>
@@ -94,7 +94,7 @@ return (
              </Select>
 
 
-             <Select mt={"8px"}>
+             <Select w={{lg:"98%"}} mt={"8px"}>
               <option>Size</option>
               <option>S</option>
               <option>M</option>

@@ -7,6 +7,8 @@ import MainRoutes from './components/MainRoutes';
 import {useSelector} from "react-redux"
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Navbar/Footer';
+import { DesktopNav } from './components/Navbar/DesktopNav';
+import Navbar2 from './components/Navbar/Navbar2';
 
 // import { Home } from './components/Homepage/Home';
 
@@ -18,6 +20,7 @@ function App() {
     <div className="App">
     
    <Navbar/>
+   <Navbar2/>
    <MainRoutes/>
    <br/>
    <Footer/>
