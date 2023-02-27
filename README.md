@@ -5,9 +5,9 @@
 <h2>Product Page</h2>
 <img src="https://i.imgur.com/91sVLS1.png" alt="prof"/>
 <h2>Product Detail Page </h2>
-<img src=""
+<img src="https://i.imgur.com/SskthHT.png" alt="prof"/>
 <h2>Cart Page<h2>
- <img src="blob:https://imgur.com/5436d5af-5db7-4273-8ce9-379d98e22e25" alt="prof-pic"/>
+ <img src="https://i.imgur.com/DWXgl7G.jpg" alt="prof-pic"/>
 <h1>Tech Stack</h1>
 <li>HTML<li><li>CSS<li><li>Javascript<li><li>React.js<li><li>Bootstrap</li><li>Redux</>
 <h1>Library Used</h1>
