@@ -14,7 +14,7 @@
 <li>Chakra UI<li>
 <li>Material UI</>
  
- <h2>Team Lead</h2>--Vedprakash Sinha
+ <h2>Team Lead</h2>  <p>Vedprakash Sinha</p>
   <h2>Team Member 1</h2>   <p>Shubham Anand</p>
  <h2>Team  Member 2</h2>--<p>Vivek Patel</p>
  <h2>Team Member 3</h2>--<p>Laxmi Choudhary</p>
