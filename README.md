@@ -13,4 +13,13 @@
 <h1>Library Used</h1>
 <li>Chakra UI<li>
 <li>Material UI</>
+ 
+ <h2>Team Lead</h2>--Vedprakash Sinha
+  <h2>Team Member 1</h2>-- Shubham Anand
+ <h2>Team  Member 2</h2>--Vivek Patel
+ <h2>Team Member 3</h2>--Laxmi Choudhary
+  <h2>Team Member 4</h2>--Nikita Sonwane
+
+ 
+
 
