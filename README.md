@@ -9,11 +9,11 @@
 <h2>Cart Page<h2>
  <img src="https://i.imgur.com/DWXgl7G.jpg" alt="prof-pic"/>
 <h1>Tech Stack</h1>
-<li>HTML</li><li>CSS</li><li>Javascript</li><li>React.js</li><li>Bootstrap</li><li>Redux</>
+<li>HTML</li><li>CSS</li><li>Javascript</li><li>React.js</li><li>Redux</li>
 <h1>Library Used</h1>
 <li>Chakra UI</li>
 <li>Material UI</li>
- 
+ <li>Bootstrap</li>
  <h2>Team Lead</h2>  <a href="https://github.com/Vedprakas987">Vedprakash Sinha</a>
  <h2>Team  Member 1</h2>   <a href="https://github.com/Shubhand17">Shubham Anand</a>
  <h2>Team Member 2</h2>    <a href="https://github.com/svivekpatel">Vivek Patel</a>
