@@ -18,7 +18,7 @@
   <h2>Team Member 1</h2>   <a href="https://github.com/laxmichoudhari">Laxmi Choudhary</a>
  <h2>Team  Member 2</h2>   <a href="https://github.com/Shubhand17">Shubham Anand</a>
  <h2>Team Member 3</h2>    <a href="https://github.com/svivekpatel">Vivek Patel</a>
-  <h2>Team Member 4</h2><p>Nikita Sonwane</p>
+  <h2>Team Member 4</h2>  <a href="https://github.com/NikitA1827">Nikita Sonwane</p>
 
  
 
