@@ -9,7 +9,7 @@
 <h2>Cart Page<h2>
  <img src="https://i.imgur.com/DWXgl7G.jpg" alt="prof-pic"/>
 <h1>Tech Stack</h1>
-<li>HTML<li><li>CSS<li><li>Javascript<li><li>React.js<li><li>Bootstrap</li><li>Redux</>
+<li>HTML</li><li>CSS</li><li>Javascript</li><li>React.js</li><li>Bootstrap</li><li>Redux</>
 <h1>Library Used</h1>
 <li>Chakra UI<li>
 <li>Material UI</>
