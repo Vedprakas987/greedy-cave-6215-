@@ -15,10 +15,10 @@
 <li>Material UI</>
  
  <h2>Team Lead</h2>--Vedprakash Sinha
-  <h2>Team Member 1</h2>-- Shubham Anand
- <h2>Team  Member 2</h2>--Vivek Patel
- <h2>Team Member 3</h2>--Laxmi Choudhary
-  <h2>Team Member 4</h2>--Nikita Sonwane
+  <h2>Team Member 1</h2>   <p>Shubham Anand</p>
+ <h2>Team  Member 2</h2>--<p>Vivek Patel</p>
+ <h2>Team Member 3</h2>--<p>Laxmi Choudhary</p>
+  <h2>Team Member 4</h2>--<p>Nikita Sonwane</p>
 
  
 
