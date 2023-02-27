@@ -1,11 +1,23 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Image, Input } from '@chakra-ui/react'
 import { Box, Divider, Flex, Text } from '@chakra-ui/layout'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { RiErrorWarningLine } from 'react-icons/ri';
 import { Button } from '@chakra-ui/button';
+import axios from 'axios';
 
 const SOrder = () => {
+    const [cartItems, setCartItems] = useState([]);
+
+    useEffect(() => {
+      axios.get("https://elegence-mock-server.onrender.com/api/Cart").then((response) => {
+        setCartItems(response.data);
+      });
+    }, []);
+    let subtotals = 0;
+  for (let i = 0; i < cartItems.length; i++) {
+    subtotals += cartItems[i].price;
+  }
     return (
         <Box p={"40px"}>
             <Flex justify={"space-between"} align={"center"} mb={"20px"}>
@@ -15,7 +27,7 @@ const SOrder = () => {
             <Box border={"1px solid #8888"} p={"30px"} color={"gray.600"}>
                 <Flex justify={"space-between"} align={"center"}>
                     <Text>Subtotal</Text>
-                    <Text>$0.00</Text>
+                    <Text>${subtotals}</Text>
                 </Flex>
                 <Flex justify={"space-between"} align={"center"}>
                     <Text>Shipping</Text>
@@ -27,7 +39,7 @@ const SOrder = () => {
                 </Flex>
                 <Flex fontWeight={"700"} color={"blackAlpha.800"} justify={"space-between"} align={"center"}>
                     <Text>Total</Text>
-                    <Text>$0.00</Text>
+                    <Text>${subtotals}</Text>
                 </Flex>
                 <Box display={"grid"} mt={"15px"}>
                     <Button mb={"15px"} bg={"#4B5666"} p={"25px"} letterSpacing={"0.06em"} color={"white"} borderRadius={"none"} disabled><Link to={"/pay"}>SHIP TO THIS ADDRESS</Link></Button>

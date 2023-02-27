@@ -8,12 +8,12 @@ import SOrder from '../VComponents/SOrder';
 const Checkout = () => {
   return (
     <Box>
-      <AddNav />
+      {/* <AddNav /> */}
       <Grid templateColumns={{ sm: "100%", md: "100%", lg: "65% 35%" }}>
         <Ship />
         <SOrder />
       </Grid>
-      <AddFooter />
+      {/* <AddFooter /> */}
     </Box>
   )
 }

@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Navbar/Footer';
 import { DesktopNav } from './components/Navbar/DesktopNav';
 import Navbar2 from './components/Navbar/Navbar2';
+import CartItem from './VPages/CartItem';
 
 // import { Home } from './components/Homepage/Home';
 
@@ -18,10 +19,10 @@ function App() {
   console.log(store)
   return (
     <div className="App">
-    
    <Navbar/>
    <Navbar2/>
    <MainRoutes/>
+
    <br/>
    <Footer/>
     </div>

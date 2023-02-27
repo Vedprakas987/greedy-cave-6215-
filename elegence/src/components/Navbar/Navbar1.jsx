@@ -16,6 +16,7 @@ import Section from "../Navbar/Section";
 import { useToast } from '@chakra-ui/react'
 import {BiSearch,} from 'react-icons/bi';
 import {FaShoppingCart} from 'react-icons/fa'
+import { Link } from "react-router-dom";
 
 export default function Navbar1() {
   const toast = useToast({
@@ -59,6 +60,7 @@ export default function Navbar1() {
                                 aria-label="Search"
                                 icon={<BiSearch />}
                             />
+                            <Link to={"/cart"}>
                             <IconButton
                                 // bg={useColorModeValue('green.400', 'green.800')}
                                 // color={useColorModeValue('white', 'gray.800')}
@@ -68,6 +70,8 @@ export default function Navbar1() {
                                 aria-label="Search"
                                 icon={<FaShoppingCart />}
                             />
+                            </Link>
+                           
                         </Stack>
                     </Stack>
 

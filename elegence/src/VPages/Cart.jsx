@@ -8,14 +8,14 @@ import Order from '../VComponents/Order'
 const Cart = () => {
   return (
     <Box>
-      <AddNav />
+      {/* <AddNav /> */}
       <Flex >
         <Grid templateColumns={{ sm: "100%", md: "100%", lg: "65% 35%" }}>
           <Basket border={"1px solid red"} w="80%" />
           <Order />
         </Grid>
       </Flex>
-      <AddFooter />
+      {/* <AddFooter /> */}
     </Box>
   )
 }

@@ -8,12 +8,12 @@ import POrder from '../VComponents/POrder';
 const Pay = () => {
     return (
         <Box>
-            <AddNav />
+            {/* <AddNav /> */}
             <Grid templateColumns={{ sm: "100%", md: "100%", lg: "65% 35%" }}>
                 <Card />
                 <POrder />
             </Grid>
-            <AddFooter />
+            {/* <AddFooter /> */}
         </Box>
 
     )
