@@ -1,5 +1,5 @@
 <h1>Eligence Fashion(Anthropology Clone)</h1>
-<p>That was a collabrative Project of an E-commerce Website that is Inspired By Anthropology.com which mostly sells Womens Dresses,Shoes Furnitures and other items </p>
+<p>That was a collabrative Project with 5 Team Member This is an E-commerce Website  that is Inspired By Anthropology.com which mostly sells Womens Dresses,Shoes Furnitures and other items </p>
 <h2>Landing Page</h2>
 <img src="https://i.imgur.com/31NZFeg.png" alt="prof"/>
 <h2>Product Page</h2>
