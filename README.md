@@ -5,7 +5,7 @@
 <h2>Product Page</h2>
 <img src="https://i.imgur.com/91sVLS1.png" alt="prof"/>
 <h2>Product Detail Page<h2>
-<img src="blob:https://imgur.com/8a81f6cf-0a83-4b66-a946-32b695ddddda" alt="prof-pic" />
+<img src="https://imgur.com/49b004c6-892f-4a83-9d4c-d1d0d9ea3c7e" alt="prof-pic" />
 <h1>Tech Stack</h1>
 <li>HTML<li><li>CSS<li><li>Javascript<li><li>React.js<li><li>Bootstrap</li><li>Redux</>
 <h1>Library Used</h1>
