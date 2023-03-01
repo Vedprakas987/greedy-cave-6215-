@@ -43,7 +43,7 @@ useEffect(() => {
             <div >
       {
         data.image && data.image.map((el)=>(
-            <img className='sametypeimage'      onClick={()=>setPic(el)}   src={el} alt="prof" />
+            <Image _hover={{border:"1px solid black"}} className='sametypeimage'      onClick={()=>setPic(el)}   src={el} alt="prof" />
         ))
       }
           </div>
@@ -55,8 +55,8 @@ useEffect(() => {
  </div>
 
 
-<Box display={"flex"} gap={{lg:"2%",xl:"5%"} }  className='child2'>
-  <Box w={{base:"68%",sm:"98%",lg:"65%",md:"65%",xl:"65%"}}>
+<Box flexWrap={"true"} display={"flex"} gap={{lg:"2%",xl:"5%"} }  className='child2'>
+  <Box w={{base:"78%",sm:"100%%",lg:"75%",md:"75%",xl:"65%"}}>
   <Flex gap={"9px"} direction={"column"} justifyContent={"start"}>
     <h2 style={{fontSize:"22px",fontWeight:"400px"}}>{data.name}</h2>
     <Text style={{color:"#23395d"}} textDecoration={"underline"}>Maeve</Text>
@@ -80,11 +80,11 @@ useEffect(() => {
   }
 <Text mb={"14px"} fontSize={"sm"}>Fit*</Text>
  
-<Flex  gap={"4px"}>
+<Flex   gap={"4px"}>
    { 
    
     Fit.map((el,i)=>
-      <button style={{padding:"4px"}} className='btn-box'>{el}</button>
+      <Button style={{padding:"4px"}} className='btn-box'>{el}</Button>
     )
    
 
@@ -93,11 +93,11 @@ useEffect(() => {
  
   <Text mt={"1rem"} mb={"14px"} fontSize={"sm"}>Size</Text>
    
-  <Flex  gap={"3px"}>
+  <Flex flexWrap={"wrap"}  gap={"3px"}>
    { 
    
     arr.map((el,i)=>
-      <button style={{padding:"4px"}} className='btn-box'>{i+25}</button>
+      <Button style={{padding:"4px"}} className='btn-box'>{i+25}</Button>
     )
    
 
@@ -130,16 +130,16 @@ useEffect(() => {
 
   </Box>
   
-  <Box  display={{sm:"flex"}} width={{base:"100%",sm:"20%"}} backgroundColor={"whitesmoke"} h={{lg:"120vh"}}>
-  <div style={{margin:"auto"}} >
+  {/* <Box w={{sm:"0%"}} h={{sm:"0%"}} display={{sm:"none",md:"none",base:"none"}}   backgroundColor={"whitesmoke"} h={{lg:"120vh"}}>
+  <Flex  flexDirection={{base:"column",sm:"row",md:"row",lg:"column",xl:"column"}} style={{margin:"auto"}} >
     <p style={{textAlign:"center"}}>You may <br/>Also Like</p>
       {
         data.color_image && data.color_image.map((el)=>(
             <Image  _hover={{border:"1px solid black"}} className='sametypeimage'      onClick={()=>setPic(el)}   src={el} alt="prof" />
         ))
       }
-          </div>
-  </Box>
+          </Flex>
+  </Box> */}
 </Box>
 
             </div>

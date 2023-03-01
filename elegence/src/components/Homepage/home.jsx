@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios"
-import { Box, Button, Divider, HStack, Image, SimpleGrid, Tag, Text } from '@chakra-ui/react';
+import { Box, Button, Divider, HStack, Image, SimpleGrid, Spinner, Tag, Text } from '@chakra-ui/react';
 
 
 import { SliderTopCompanies } from './Slider';
 import Navbar from '../Navbar/Navbar';
+import { BiLoader, BiLoaderCircle } from 'react-icons/bi';
+import { RiLoader2Fill, RiLoader5Line } from 'react-icons/ri';
 
 export const Home = () => {
-
+    const [bool,setbool] = useState(false)
     const [data, setData] = useState();
 
     //Slider
@@ -105,6 +107,7 @@ export const Home = () => {
             .then((res) => {
                 console.log(res.data)
                 setData(res.data)
+                setbool(true)
             })
             .catch((err) => {
                 console.log(err)
@@ -118,7 +121,7 @@ export const Home = () => {
 
     return <div>
         {/* <Box width={"76%"}> */}
-        <SimpleGrid
+       {bool ? <SimpleGrid
             columns={[4]}
             width={"71%"}
             // border="2px solid red"
@@ -129,7 +132,13 @@ export const Home = () => {
             <Image src="https://images.ctfassets.net/5de70he6op10/7tbbE9vPj5JLvxgKHE5RbB/e0bc77c5fbc266e63294817e82ead70e/473929272-ls_m0_banner_d.jpg?w=630&q=80&fm=webp" alt='img' />
             <Image src="https://images.ctfassets.net/5de70he6op10/5AHOqJRlFibi2rOS0C77aP/3e8dc2dfc62dd089f2cb2e53357a78d3/473929274-ls_m0_banner_e.jpg?w=630&q=80&fm=webp" alt='img' />
             <Image src="https://images.ctfassets.net/5de70he6op10/1yCt23d6XxdmkjGohde5ev/97f13874f53c019005210e6a690f3836/473929257-ls_m0_banner_a.jpg?w=630&q=80&fm=webp" alt='img' />
-        </SimpleGrid>
+        </SimpleGrid>:<RiLoader5Line
+        size={"sm"}
+        color={"blue.500"}
+        height={"70%"}
+/>
+
+       }
         {/* </Box> */}
         <img width={"71%"} style={{ margin: "auto" }} src={data?.banner} alt="banner" />
         <Button

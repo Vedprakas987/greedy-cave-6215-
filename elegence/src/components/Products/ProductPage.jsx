@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Select, SimpleGrid, Text, textDecoration } from '@chakra-ui/react'
+import { Box, Flex, Image, Select, SimpleGrid, Spinner, Text, textDecoration } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import ProductCard from './ProductCard'
 import ProductList from './ProductList'
@@ -23,7 +23,7 @@ useEffect(() => {
     axios.get("https://elegence-mock-server.onrender.com/api/Dresses?Section=2").then((res)=>setDress2(res.data))
     }, [])
 let arr1 = ['Cocktail & Party Dresses','Lounge & Casual Dresses','Little Black Dresses','Little White Dresses','Maxi Dresses','Midi Dresses','Mini & Tunic Dresses','Jumpsuits','Wedding Guest Dresses','Black Tie Wedding','Cocktail Wedding','Beach Wedding']
-  
+  console.log(DressesData1,DressesData2)
 return (
     <div>
         <div className='productpage'>
@@ -104,7 +104,17 @@ return (
              </Select>
             </Box>
             <Box>
-                <ProductList data={DressesData1} />
+                {
+                  DressesData1.length>0?<ProductList data={DressesData1} />:<Spinner
+                  thickness='4px'
+                  speed='0.65s'
+                  emptyColor='gray.200'
+                  color='blue.500'
+                  size='xl'
+                  mt="1rem"
+                />
+
+            }
                 <Flex  justifyContent={"center"} className='Add'  gridTemplateColumns={"70% 20%"} mt={"3rem"}>
              
             <Image className='Addimg' h={{base:"100%",sm:"100%",lg:"86%"}} ml={"1rem"}  w={{base:"100%",sm:"100%",lg:"64.5%"}} src='https://images.ctfassets.net/5de70he6op10/6QOf9TDaIjOyrwNScJNEZv/6b6801edc04c30b0f6c1df088e48a06d/11_Vacation_Dresses_2x.jpg?w=1440&q=80&fm=webp' alt='prof-pis'/>   
@@ -113,7 +123,16 @@ return (
                 </Flex>
                 <br/>
                 <Box className='produc'>
-                <ProductList data={DressesData2}/>
+             {  DressesData2.length>0?<ProductList data={DressesData2}/>:<Spinner
+  thickness='4px'
+  speed='0.65s'
+  emptyColor='gray.200'
+  color='blue.500'
+  size='xl'
+  mt={"1rem"}
+/>
+
+          }
                 </Box>
             </Box>
           

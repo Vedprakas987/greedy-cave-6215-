@@ -32,7 +32,7 @@ const DesktopSubNav = ({ label, href, subLabel, subLabel1, subLabel2, subLabel3,
             p={2}
             rounded={'md'}
             _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
-            <Stack direction={'row'} align={'center'}>
+            <Stack  direction={'row'} align={'center'}>
                 <Box textAlign={'left'}>
                     <Text
                         transition={'all .3s ease'}

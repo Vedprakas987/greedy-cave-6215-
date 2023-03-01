@@ -10,6 +10,7 @@ import Footer from './components/Navbar/Footer';
 import { DesktopNav } from './components/Navbar/DesktopNav';
 import Navbar2 from './components/Navbar/Navbar2';
 import CartItem from './VPages/CartItem';
+import { Box } from '@chakra-ui/react';
 
 // import { Home } from './components/Homepage/Home';
 
@@ -19,9 +20,11 @@ function App() {
   console.log(store)
   return (
     <div className="App">
-   <Navbar/>
+    <Box w={"100%"}>
+    <Navbar/>
    <Navbar2/>
    <MainRoutes/>
+      </Box>  
 
    <br/>
    <Footer/>
