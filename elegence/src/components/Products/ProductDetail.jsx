@@ -10,6 +10,7 @@ import ProductCard from './ProductCard'
 import ProductPage from './ProductPage'
 import "./productpage.css"
 import Spiwer from './Swiper';
+import Loaders from '../../Loaders/Loader'
 export default function ProductDetail() {
     const dispatch = useDispatch()
     const [data,setdata] = useState({})
@@ -37,6 +38,7 @@ useEffect(() => {
     let Fit = ["Standard","Petite",'plus']
   return (
     <>
+    { (DressesData1.length>0 && DressesData2.length>0)?
     <div className='Parent_Box'>
 <div className='Child1'>
 
@@ -142,7 +144,9 @@ useEffect(() => {
   </Box> */}
 </Box>
 
-            </div>
+            </div>:<Loaders/>
+
+            }
             <br/>
             <h2   style={{textAlign:"start",marginLeft:"14px",fontWeight:"medium",marginBottom:"8px",marginTop:"8px"}}>Recommended For You</h2>
             

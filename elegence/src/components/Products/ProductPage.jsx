@@ -5,6 +5,7 @@ import ProductList from './ProductList'
 import './styles/productstyle.css'
 import './styles/productstyle.css'
 import axios from "axios"
+import Loaders from '../../Loaders/Loader'
 export default function ProductPage() {
 let addElem =  {
   id:999,
@@ -105,14 +106,7 @@ return (
             </Box>
             <Box>
                 {
-                  DressesData1.length>0?<ProductList data={DressesData1} />:<Spinner
-                  thickness='4px'
-                  speed='0.65s'
-                  emptyColor='gray.200'
-                  color='blue.500'
-                  size='xl'
-                  mt="1rem"
-                />
+                  DressesData1.length>0?<ProductList data={DressesData1} />:<Loaders/>
 
             }
                 <Flex  justifyContent={"center"} className='Add'  gridTemplateColumns={"70% 20%"} mt={"3rem"}>
@@ -123,14 +117,8 @@ return (
                 </Flex>
                 <br/>
                 <Box className='produc'>
-             {  DressesData2.length>0?<ProductList data={DressesData2}/>:<Spinner
-  thickness='4px'
-  speed='0.65s'
-  emptyColor='gray.200'
-  color='blue.500'
-  size='xl'
-  mt={"1rem"}
-/>
+             {  DressesData2.length>0?<ProductList data={DressesData2}/>:<
+             Loaders/>
 
           }
                 </Box>

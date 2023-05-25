@@ -17,6 +17,7 @@ import { SliderTopCompanies } from "./Slider";
 import Navbar from "../Navbar/Navbar";
 import { BiLoader, BiLoaderCircle } from "react-icons/bi";
 import { RiLoader2Fill, RiLoader5Line } from "react-icons/ri";
+import Loaders from "../../Loaders/Loader";
 
 export const Homepage = () => {
   const [bool, setbool] = useState(false);
@@ -164,8 +165,9 @@ export const Homepage = () => {
   return (
     <div>
       {/* <Box width={"76%"}> */}
-      {bool ? (
-        <SimpleGrid
+      {
+      bool?<Box>
+       <SimpleGrid
           columns={[4]}
           width={"71%"}
           // border="2px solid red"
@@ -205,9 +207,6 @@ export const Homepage = () => {
         
          
         </SimpleGrid>
-      ) : (
-        <RiLoader5Line size={"sm"} color={"blue.500"} height={"70%"} />
-      )}
       {/* </Box> */}
       <img
         width={"71%"}
@@ -230,8 +229,12 @@ export const Homepage = () => {
       </Button>
 
       </Link>
-    
-      <SimpleGrid
+      </Box>:<Loaders
+                />
+
+      }
+    {
+    bool?<SimpleGrid
         //  border={"2px solid blue"}
         columns={[1, 2, 3]}
         width={"71%"}
@@ -261,8 +264,10 @@ export const Homepage = () => {
              
             );
           })}
-      </SimpleGrid>
+      </SimpleGrid>:<Loaders/>
 
+
+        }
       <SimpleGrid
         //  border={"2px solid blue"}
         columns={[1, 2, 2]}

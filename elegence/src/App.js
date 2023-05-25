@@ -14,7 +14,10 @@ import { Box } from '@chakra-ui/react';
 
 // import { Home } from './components/Homepage/Home';
 
+import { EventEmitter } from 'events';
 
+const myEmitter = new EventEmitter();
+myEmitter.setMaxListeners(15);
 function App() {
   const store = useSelector((store)=>store)
   console.log(store)
