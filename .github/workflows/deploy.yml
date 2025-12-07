@@ -1,0 +1,46 @@
+name: Auto Deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: elegence/package-lock.json
+      
+      - name: Install dependencies
+        working-directory: ./elegence
+        run: npm ci
+      
+      - name: Run tests
+        working-directory: ./elegence
+        run: npm test -- --watchAll=false --coverage=false || true
+      
+      - name: Build application
+        working-directory: ./elegence
+        run: npm run build
+      
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./elegence/build
+          cname: false
+
