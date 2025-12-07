@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "buildCommand": "cd elegence && npm install && npm run build",
+  "outputDirectory": "elegence/build",
+  "installCommand": "cd elegence && npm install"
+}
+

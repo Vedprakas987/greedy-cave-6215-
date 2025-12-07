@@ -36,11 +36,15 @@ jobs:
         working-directory: ./elegence
         run: npm run build
       
-      - name: Deploy to GitHub Pages
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      
+      - name: Deploy to Vercel
         if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./elegence/build
-          cname: false
+        working-directory: ./elegence
+        run: |
+          vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --yes
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
